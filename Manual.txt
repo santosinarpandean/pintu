@@ -1,0 +1,42 @@
+--- Docs Manual ---
+--- Created By Santo 18 October 2020 ---
+
+
+
+--- SMART CONTRACT ---
+
+/*** Unit Testing ***/
+Unit Testing of the SmartContract was using Remix Tests, Documentation can be found here https://github.com/ethereum/remix/tree/master/remix-tests
+
+For ease of testing purposes, I have deployed the contract to the Ropsten Network, with details:
+Contract Address: 0x66de8f537C488612914c993419dF625aFaCb3c01
+https://ropsten.etherscan.io/address/0x66de8f537c488612914c993419df625afacb3c01#code
+
+
+
+--- DAPPS ---
+
+/*** Details ***/
+Created using nuxtJs (based on vueJs)
+Limitation:
+1. DApps feature as following:
+   - Connect user metamask
+   - See the connected account
+   - See the current ETH Balance on ropsten Network
+   - See the current Deposit Balance in the contract for the connected metamask account
+   - See the counter value
+   - Increment the counter (1 User can call multiple increment counter function)
+   - Deposit ETH to the contract (minimum deposit = 1 ETH)
+   - Withdraw ETH from the contract (minimum withdrawal = 1 ETH)
+2. DApps cannot see the history of deposit, withdrawal, and the incrementCounter transaction.
+3. DApps did not implement the socket fundamental, so user need to check the transaction status manually and then refresh the page after the transaction has been successfully verified added to the blockchain.
+4. Also, to see the error reason of calling the smart contract (revert, assert throw error), user need to see the error from the ethereum explorer.
+
+/*** INSTALLATION ***/
+1.Open PintuAssessmentDApps (cd PintuAssessmentDApps) and install the package with yarn or npm (yarn) / (npm install)
+2.Run the webserver for DApps by running the command (yarn dev)
+3.To access the DApps, visit http://localhost:3000
+4.The contract address is stored in the .env file, so in case you deployed the new contract, just need to change the contract address in .env file
+
+/*** DISCLAIMER ***/
+All of the DApps feature has been tested by using ONLY Chrome Browser.
