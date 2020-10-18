@@ -1,5 +1,12 @@
 export default [
   {
+    inputs: [],
+    name: "incrementCounter",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
     anonymous: false,
     inputs: [
       {
@@ -19,6 +26,19 @@ export default [
     type: "event"
   },
   {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_total_withdrawal",
+        type: "uint256"
+      }
+    ],
+    name: "withdraw",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
     anonymous: false,
     inputs: [
       {
@@ -36,6 +56,10 @@ export default [
     ],
     name: "Withdrawal",
     type: "event"
+  },
+  {
+    stateMutability: "payable",
+    type: "receive"
   },
   {
     inputs: [
@@ -68,29 +92,5 @@ export default [
     ],
     stateMutability: "view",
     type: "function"
-  },
-  {
-    inputs: [],
-    name: "incrementCounter",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function"
-  },
-  {
-    inputs: [
-      {
-        internalType: "uint256",
-        name: "_total_withdrawal",
-        type: "uint256"
-      }
-    ],
-    name: "withdraw",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function"
-  },
-  {
-    stateMutability: "payable",
-    type: "receive"
   }
 ];
